@@ -30,14 +30,33 @@ const SellerDashboard = () => {
     
     // Load data from localStorage
     setProducts(getProducts());
-    setOrders(getOrders());
     setMessages(getMessages());
   }, []);
+
+  useEffect(() => {
+    loadOrders();
+  }, []);
+
+  const loadOrders = () => {
+    try {
+      const storedOrders = localStorage.getItem('orders'); // Corrected key
+      if (storedOrders) {
+        const parsedOrders = JSON.parse(storedOrders);
+        setOrders(parsedOrders);
+      } else {
+        setOrders([]);
+        console.log("No orders found in localStorage under 'orders'.");
+      }
+    } catch (error) {
+      console.error("Error loading orders from localStorage:", error);
+      setOrders([]);
+    }
+  };
   
   // Calculate stats
   const totalSales = orders.reduce((sum, order) => sum + order.total, 0);
   const totalProducts = products.length;
-  const pendingOrders = orders.filter(order => order.status === 'pending').length;
+  const pendingOrders = orders.filter(order => order.status === 'Processing').length;
   const unreadMessages = messages.filter(message => !message.read).length;
 
   return (
@@ -123,14 +142,13 @@ const SellerDashboard = () => {
                     {orders.slice(0, 5).map((order) => (
                       <tr key={order.id} className="border-b">
                         <td className="py-3 px-2">{order.id}</td>
-                        <td className="py-3 px-2">{order.customerName}</td>
-                        <td className="py-3 px-2">{new Date(order.createdAt).toLocaleDateString()}</td>
+                        <td className="py-3 px-2">{order.shipping?.firstName}</td>
+                        <td className="py-3 px-2">{new Date(order.date).toLocaleDateString()}</td>
                         <td className="py-3 px-2">
                           <span className={`px-2 py-1 rounded-full text-xs ${
-                            order.status === 'pending' ? 'bg-amber-100 text-amber-800' :
-                            order.status === 'processing' ? 'bg-blue-100 text-blue-800' :
-                            order.status === 'shipped' ? 'bg-purple-100 text-purple-800' :
-                            order.status === 'delivered' ? 'bg-green-100 text-green-800' :
+                            order.status === 'Processing' ? 'bg-blue-100 text-blue-800' :
+                            order.status === 'Shipped' ? 'bg-purple-100 text-purple-800' :
+                            order.status === 'Delivered' ? 'bg-green-100 text-green-800' :
                             'bg-red-100 text-red-800'
                           }`}>
                             {order.status}

@@ -4,6 +4,7 @@ import {
   ShoppingCart, 
   Package, 
   User,
+  UserCheck,
   LogOut
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -43,6 +44,11 @@ const DashboardNav = ({ userType }: DashboardNavProps) => {
           icon: LayoutDashboard,
           label: "Dashboard",
           href: "/admin-dashboard",
+        },
+        {
+          icon: UserCheck,
+          label: "Seller Invite",
+          href: "/seller-verification",
         },
       ];
     }

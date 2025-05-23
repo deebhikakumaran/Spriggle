@@ -24,6 +24,7 @@ import SellerMessages from "./pages/SellerMessages";
 import SellerProducts from "./pages/SellerProducts";
 import AddProduct from "./pages/AddProduct";
 import EditProduct from "./pages/EditProduct";
+import SellerVerification from "./pages/SellerVerification";
 
 const queryClient = new QueryClient();
 
@@ -42,6 +43,7 @@ const App = () => (
             <Route path="/signin" element={<SignIn />} />
             <Route path="/signup" element={<SignUp />} />
             <Route path="/admin-dashboard" element={<AdminDashboard />} />
+            <Route path="/seller-verification" element={<SellerVerification />} />
             <Route path="/customer-dashboard" element={<CustomerDashboard />} />
             <Route path="/cart" element={<Cart />} />
             <Route path="/orders" element={<Orders />} />
