@@ -33,7 +33,7 @@ Spriggle bridges the gap by providing:
 - **Dashboards:**  
   - Farmers: Manage products, orders, chat with customers, and connect to pickup points.
   - Customers: Search products, view orders, and chat with farmers.
-- **Pre-Order System:** Urban customers place pre-orders a week in advance, and farmers fulfill them for pickup or delivery, ensuring freshness and efficiency[1][2].
+- **Pre-Order System:** Urban customers place pre-orders a week in advance, and farmers fulfill them for pickup or delivery, ensuring freshness and efficiency.
 
 ---
 
@@ -41,7 +41,7 @@ Spriggle bridges the gap by providing:
 
 - **Economic:** Boosts rural incomes and ensures fair trade.
 - **Social:** Supports skill development and rural upliftment.
-- **Environmental:** Promotes eco-friendly packaging and local sourcing, reducing carbon footprint[1].
+- **Environmental:** Promotes eco-friendly packaging and local sourcing, reducing carbon footprint.
 
 ---
 
@@ -79,7 +79,6 @@ Spriggle bridges the gap by providing:
 
 - Node.js (latest LTS)
 - npm or yarn
-- Python 3.x (for Flask backend)
 
 ### Installation
 
