@@ -31,8 +31,8 @@ Spriggle bridges the gap by providing:
 - **Secure Digital Payments:** UPI and wallet integration for instant, traceable payments to sellers.
 - **Community Logistics:** Uses India Post and local networks for efficient delivery.
 - **Dashboards:**  
-  - *Farmers*: Manage products, orders, chat with customers, and connect to pickup points.
-  - *Customers*: Search products, view orders, and chat with farmers.
+  - Farmers: Manage products, orders, chat with customers, and connect to pickup points.
+  - Customers: Search products, view orders, and chat with farmers.
 - **Pre-Order System:** Urban customers place pre-orders a week in advance, and farmers fulfill them for pickup or delivery, ensuring freshness and efficiency[1][2].
 
 ---
@@ -47,14 +47,14 @@ Spriggle bridges the gap by providing:
 
 ## Tech Stack
 
-- **Frontend:**
+**Frontend:**
 
 - [React](https://react.dev/)
 - [Vite](https://vitejs.dev/)
 - [Tailwind CSS](https://tailwindcss.com/)
 - [Typescript](https://www.typescriptlang.org/)
 
-- **Infra:**
+**Infra:**
 
 - [Netlify Hosting](https://www.netlify.com/)
 
