@@ -2,7 +2,7 @@
 
 **Powered by Rural, Loved by Urban**
 
-🌐 [Visit the Deployed Site](https://spriggle.netlify.app/)
+🌐 [Deployed Site](https://spriggle.netlify.app/)
 
 ---
 
@@ -47,18 +47,16 @@ Spriggle bridges the gap by providing:
 
 ## Tech Stack
 
-**Frontend:**
+- **Frontend:**
 
 - [React](https://react.dev/)
 - [Vite](https://vitejs.dev/)
 - [Tailwind CSS](https://tailwindcss.com/)
 - [Typescript](https://www.typescriptlang.org/)
 
-**Infra:**
+- **Infra:**
 
 - [Netlify Hosting](https://www.netlify.com/)
-
----
 
 **Why this stack?**
 - Enables rapid development and easy maintenance.
